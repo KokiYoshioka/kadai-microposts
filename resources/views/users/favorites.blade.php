@@ -9,12 +9,10 @@
         <div class="col-sm-8">
             {{-- タブ --}}
             @include('users.navtabs')
-            @if (Auth::id() == $user->id)
-                {{-- 投稿フォーム --}}
-                @include('microposts.form')
-            @endif
             {{-- 投稿一覧 --}}
-            @include('microposts.microposts')
+            @if (count($favorites) > 0)
+                @include('microposts.microposts', ['microposts' => $favorites])
+            @endif
         </div>
     </div>
 @endsection
