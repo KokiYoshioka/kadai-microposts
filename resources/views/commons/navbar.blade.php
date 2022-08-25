@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ secure_asset('/css/style.css')  }}" >
 <header class="mb-4">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         {{-- トップページへのリンク --}}
